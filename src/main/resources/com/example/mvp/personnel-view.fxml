@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mvp.PersonnelController">
+        <TableView fx:id="personnelTableView" prefHeight="560.0" prefWidth="600.0">
+                <columns>
+                        <TableColumn fx:id="idColumn" text="ID" />
+                        <TableColumn fx:id="nomColumn" text="Nom" />
+                        <TableColumn fx:id="prenomColumn" text="Prenom" />
+                        <TableColumn fx:id="dateColumn" prefWidth="120.0" text="Date d'Entree" />
+<!--                        <TableColumn text="Edit"/>-->
+                        <TableColumn fx:id="competencesColumn" prefWidth="83.0" text="Competences" />
+                        <TableColumn fx:id="deleteColumn" prefWidth="65.0" text="Delete" />
+                </columns>
+        </TableView>
+        <VBox layoutX="650" layoutY="20" prefHeight="100.0" prefWidth="600.0" spacing="10">
+                <Label text="Competences" />
+                <FlowPane fx:id="competencesPane" hgap="10" maxWidth="250" vgap="10" />
+                <Button fx:id="addCompetenceButton" text="Add Competence" />
+        </VBox>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1"
-          fx:controller="com.example.mvp.PersonnelController"
-          prefHeight="400.0" prefWidth="600.0">
-        <ListView fx:id="employeeListView" />
+
 </VBox>
-
-
-
